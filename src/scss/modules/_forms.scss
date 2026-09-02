@@ -1,0 +1,102 @@
+.frm{
+	//padding-top: 25px;
+	label{
+		color: $base-font-color;
+		padding-bottom: 7px;
+	}
+	
+	.form-group{
+		margin-bottom: 15px;
+		> .btn{ margin-top: 25px; }
+	}	
+
+	textarea.form-control{
+		height: auto; resize: none;
+	}
+	
+	.err-msg{
+		display: none; margin-top: -15px; color: #6c0303; 
+	}
+
+	select{
+		-webkit-appearance: none;
+		 appearance: none;
+		 &:-ms-expand {
+		  	display: none;
+		}
+	}
+	.btn{
+		min-width: auto;
+		&.btn-submit{
+			height: 46px;
+			min-width: 110px;
+		}
+	}
+	
+	.form-control,
+	select.form-select{
+		font-size: 18px; padding: 5px 15px; margin-bottom: 15px; border: 1px solid $v_input-border; height: 46px; background-color: $v_input-bgcolor; background-color: $v_input-bgcolor;border-radius: $v_input-border-radius; color: $base-font-color  ;
+	} 
+
+	
+
+	@include M_Medium_Up{
+		&.frm-subscribe{
+			width: 70%;
+		}
+	}	
+	.form-check{
+		padding-left: 35px; margin:25px 0 15px;	 position: relative;
+		input{ width: 25px; height: 25px; }
+
+		.form-check-input{
+			margin:-18px 0 0 -35px; top: 50%; position: absolute;
+			&:checked{
+				background-color: $v_input-border; 
+				border-color: $v_input-border;
+			}
+		}
+	}
+	textarea{
+		@extend %sn-font-light;
+	}
+
+}
+
+.custom-checkbox {
+	padding-left: 30px; margin-right: 10px;
+	input{ width: 25px; height: 25px; }
+	.custom-control-label{
+		&:before{
+			left:-30px ;width: 20px; height: 20px; border-radius: 2px;  border: 1px solid $v_input-border;
+		}
+		&:after{
+			width: 20px; height: 20px; left:-30px;
+		}
+	}
+}
+
+.custom-radio{
+	.custom-control-label{
+		padding-left: 25px; margin-left: -15px;
+		&:before{
+			border-color: $v_input-border;
+			background-color:$v_input-bgcolor;
+			width: 15px;
+			height: 15px;
+			top: 7px;
+			left: 0;
+		}
+		&:after{
+			display: none;
+		}
+	}
+}
+
+.custom-control-input{
+	&:checked ~ 
+		.custom-control-label::before{
+			border-color: $v_input-border;
+		    background-color: $v_input-border;
+	}
+}

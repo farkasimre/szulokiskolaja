@@ -1,0 +1,38 @@
+{
+  "name": "gulp-scss-development",
+  "version": "1.0.0",
+  "description": "Modern Gulp-based SCSS development environment with PurgeCSS and minification",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp watch",
+    "build": "gulp build",
+    "css": "gulp css",
+    "css:purge": "gulp css:purge",
+    "clean": "gulp clean"
+  },
+  "keywords": [
+    "gulp",
+    "scss",
+    "bootstrap",
+    "purgecss",
+    "development"
+  ],
+  "author": "farkas imre",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "jquery": "^3.7.1",
+    "@popperjs/core": "^2.11.8"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.8",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-purgecss": "^6.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "browser-sync": "^3.0.2",
+    "del": "^6.1.1"
+  }
+}

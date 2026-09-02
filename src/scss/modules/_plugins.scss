@@ -1,0 +1,51 @@
+.splide .splide__track--nav > .splide__list > .splide__slide {
+	border: none !important;
+}
+
+.splide__arrows {
+	button {
+		top: -50px;
+		background-color:transparent;
+		background-position: center;
+		background-size: 100% 100%;
+		width: 45px;
+		height: 45px;
+		border-radius: 0%;
+		@include anim(.5s);
+
+		&:first-of-type {
+			background-image: url("images/arrow-right.svg");
+			left: auto;
+			right:7em;
+			&:hover {
+				margin-right: 5px;
+			}
+		}
+
+		&:last-of-type {
+			background-image: url("images/arrow-left.svg");
+			right: 3em;
+			&:hover {
+				margin-right: -5px;
+			}
+			
+		}
+
+		svg {
+			display: none;
+		}
+	}
+}
+
+[data-parallax-bg],
+[data-parallax-fg] {
+  will-change: transform;
+}
+
+.bg-image {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+.bg-image.is-visible {
+  opacity: 1;
+}

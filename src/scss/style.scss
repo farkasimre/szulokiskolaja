@@ -1,0 +1,140 @@
+
+
+/* import only the necessary Bootstrap files */
+@import "node_modules/bootstrap/scss/functions"; 
+@import "node_modules/bootstrap/scss/variables";
+/* --- begin customization ---- */
+
+
+@import "theme-variables/variables";
+
+
+/*
+$theme-colors: (
+    "primary": $cl-btn-primary   ,
+    "secondary": $cl-btn-secondary  
+);*/
+
+$navbar-nav-link-padding-x:  0;
+
+$navbar-light-color:               $navbar-light-cl;
+$navbar-light-hover-color:         $navbar-light-cl;
+$navbar-light-active-color:        $navbar-light-cl;
+$navbar-light-disabled-color:      $navbar-light-cl;
+
+
+
+$navbar-dark-color:               $navbar-dark-cl;
+$navbar-dark-hover-color:         $navbar-dark-cl;
+$navbar-dark-active-color:        $navbar-dark-cl;
+$navbar-dark-disabled-color:      $navbar-dark-cl;
+
+$border-color:                $cl-btn-primary ;
+$border-radius:               25px;
+$border-radius-lg:            0;
+$border-radius-sm:            0;
+
+
+$input-height:                48px;
+$input-placeholder-color:     $v_input-placeholder;
+$input-border-color:          $v_input-border;
+$input-border-radius:         $v_input-border-radius;
+$input-box-shadow:            none;
+$input-focus-box-shadow:      none;
+$input-bgcolor                :$v_input-bgcolor;
+
+$breadcrumb-bg:               transparent;
+$breadcrumb-padding-x:        0;
+
+$enable-negative-margins:     true;
+
+$grid-gutter-width: 30px;
+
+$btn-font-size:               $btnfontsize;
+
+
+$position-values: (
+  0: 0,
+  30: 30%,
+  40: 40%,
+  50: 50%,
+  100: 100%
+) !default;
+
+/* increase the width of the grid lg and xl breakpoints */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+
+/* --- end customization ------ */
+/* finally, import Bootstrap to set the changes! */
+
+
+$pagination-padding-y:              .3rem;
+$pagination-padding-x:              1.2rem;
+$pagination-padding-y-sm:           .25rem;
+$pagination-padding-x-sm:           .5rem;
+$pagination-padding-y-lg:           .75rem;
+$pagination-padding-x-lg:           1.5rem;
+
+$pagination-color:                  #707070;
+$pagination-bg:                     #fff;
+$pagination-border-width:           $border-width;
+$pagination-border-radius:          0;
+$pagination-margin-start:           -$pagination-border-width;
+$pagination-border-color:           rgba(43, 43, 43, .3);
+
+$pagination-focus-color:            #707070;
+$pagination-focus-bg:               $gray-200;
+$pagination-focus-box-shadow:       $input-btn-focus-box-shadow;
+$pagination-focus-outline:          0;
+  
+$pagination-hover-color:            $link-hover-color;
+$pagination-hover-bg:               $gray-200;
+$pagination-hover-border-color:      rgba(43, 43, 43, .6);
+
+$pagination-active-color:           $component-active-color;
+$pagination-active-bg:              $component-active-bg;
+$pagination-active-border-color:    $pagination-active-bg;
+
+$pagination-disabled-color:         $gray-600;
+$pagination-disabled-bg:            $white;
+$pagination-disabled-border-color:   rgba(43, 43, 43, .1);
+
+
+$pagination-border-radius-sm:       $border-radius-sm;
+$pagination-border-radius-lg:       $border-radius-lg;
+$pagination-font-size:           1em;
+
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+/* purgecss start ignore */
+@import "plugins/animate";
+@import "plugins/splide";
+/* purgecss end ignore */
+
+
+
+/**
+Site main file
+*/
+/*theme sizes / colors/ fonts */
+
+@import "theme-variables/mixin";
+
+
+@import "modules/common",
+"modules/header",
+"modules/footer",
+"modules/images",
+"modules/blocks",
+"modules/forms",
+"modules/plugins"
+

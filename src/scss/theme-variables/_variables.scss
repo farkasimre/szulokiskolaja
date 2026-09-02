@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'PP Eiko';
+    src: url('fonts/PPEiko-Light.woff2') format('woff2'),
+        url('fonts/PPEiko-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Eiko';
+    src: url('fonts/PPEiko-Regular.woff2') format('woff2'),
+        url('fonts/PPEiko-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/*fonts*/
+
+$base-font-size:			18px;
+$base-font-color            :#3d3d3d;
+
+
+$bg_color_base              :#f1f0eb;
+$bg_color_base_darker       :#9f9175;
+
+$bg-white                   :#fff;
+$bg-snow                    :#f6f6f6;
+$bg_footer					:#23313d;
+
+
+$cl_white                   :#fff;
+
+$cl_copyright               :#393939;
+$cl_dark                    :#2b2b2b;
+
+$v_input-placeholder          :#1e1e1e;
+$v_input-border               :rgba(43, 43, 43, 0.23);
+$v_input-bgcolor              :rgba(255, 255, 255, 0.9);
+$v_input-placeholder-dark     :#0000FF;
+$v_input-border-dark          :#dfdfdf;
+$v_input-border-radius        :5px;
+
+
+
+
+$title-font-color			 :#242424;
+
+$btnfontsize                :$base-font-size;
+$cl-btn-primary             :#717467;
+$cl-btn-primary-font        :#ffffff;
+$cl-btn-secondary			:#0079b3;
+
+$cl-navbar-light            :#fff;
+$cl-navbar-dark             :#242424;
+
+$font-family-base           :'Nunito', sans-serif;
+$font-family-titles			:'PP Eiko', serif;
+
+$body-color					 :#f1f0eb;
+
+
+
+$title-bg-color				:#ececed;//
+$title-bg-darkcolor			:#d5d5d5;//
+
+$cl-highlite				:#7f865c;//
+
+
+$link-font-color			:#414141;
+$blue-font-color			:#1f4088;
+
+$navbar-light-cl			:#fff;//
+$navbar-dark-cl				:#353535;//
+
+
+
+$bg-darblue					:#0a2236;	//
+$bg-green					:#7f865c;	//
+$bg-gray					:#f3f3f3;//
+$armored-steel              :rgba(113, 116, 103,.07)//#717467;

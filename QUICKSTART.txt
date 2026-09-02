@@ -1,0 +1,121 @@
+╔══════════════════════════════════════════════════════════════╗
+║                   QUICK START GUIDE                          ║
+╚══════════════════════════════════════════════════════════════╝
+
+🚀 GET STARTED IN 3 STEPS:
+────────────────────────────────────────────────────────────────
+
+STEP 1: Install Dependencies
+────────────────────────────
+npm install
+
+This installs all required packages (~50MB download)
+
+
+STEP 2: Start Development Server
+────────────────────────────────
+npm start
+
+Opens browser at http://localhost:3000
+Auto-reloads when you save files
+
+
+STEP 3: Edit & Watch
+────────────────────
+Edit files in src/scss/ folder
+Save and see changes instantly in browser!
+
+
+📁 OUTPUT FILES:
+────────────────────────────────────────────────────────────────
+
+After running 'npm start', you'll get:
+
+src/css/full/style.css         ← Full CSS (for development)
+src/css/full/style.min.css     ← Full CSS minified
+src/css/style.css              ← Purged CSS (unused removed)
+src/css/style.min.css          ← Purged + minified (USE IN PRODUCTION)
+
+
+🎯 WHAT TO USE IN HTML:
+────────────────────────────────────────────────────────────────
+
+DEVELOPMENT (use full version with sourcemap):
+<link rel="stylesheet" href="css/full/style.css">
+
+PRODUCTION (use purged + minified):
+<link rel="stylesheet" href="css/style.min.css">
+
+
+⚡ AVAILABLE COMMANDS:
+────────────────────────────────────────────────────────────────
+
+npm start              Start dev server + watch mode
+npm run build          Production build (clean + compile + purge + minify)
+npm run css            Just compile SCSS
+npm run css:purge      Compile + purge + minify
+npm run clean          Delete generated CSS files
+
+
+🔍 FILE SIZE COMPARISON:
+────────────────────────────────────────────────────────────────
+
+Before Optimization:
+Full CSS:              ~250KB
+
+After PurgeCSS + Minification:
+Purged + Minified:     ~40KB     ← 80% SMALLER! 🎉
+
+
+📝 COMMON TASKS:
+────────────────────────────────────────────────────────────────
+
+Add new SCSS file:
+1. Create: src/scss/modules/_mynew.scss
+2. Import in src/scss/style.scss:
+   @import 'modules/mynew';
+3. Save - auto-compiles!
+
+Keep CSS class from being purged:
+1. Open gulpfile.js
+2. Find 'safelist' section
+3. Add your class:
+   standard: ['my-class']
+
+
+⚠️  IMPORTANT NOTES:
+────────────────────────────────────────────────────────────────
+
+✓ This uses Dart Sass (modern) - no Python/C++ needed
+✓ Bootstrap 5.3.3 is pre-installed
+✓ PurgeCSS keeps: modals, dropdowns, carousels, nav
+✓ Sourcemaps only in 'full' folder
+✓ Server runs on port 3000 by default
+
+
+🐛 TROUBLESHOOTING:
+────────────────────────────────────────────────────────────────
+
+Problem: CSS class removed by PurgeCSS
+Fix: Add to safelist in gulpfile.js
+
+Problem: Port 3000 already in use
+Fix: Change port in gulpfile.js (browserSync.init)
+
+Problem: Sourcemap not working
+Fix: Use css/full/style.css (not the purged version)
+
+
+📚 MORE INFO:
+────────────────────────────────────────────────────────────────
+
+Read README.md for complete documentation
+Check gulpfile.js for all available tasks
+Visit package.json for dependency versions
+
+
+════════════════════════════════════════════════════════════════
+
+Ready? Run:  npm install  →  npm start
+
+════════════════════════════════════════════════════════════════
