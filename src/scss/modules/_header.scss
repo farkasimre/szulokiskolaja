@@ -41,6 +41,9 @@
 			float: left;
 			margin: -8px 5px 0 0;
 			max-width: 140px;
+			@include M_Medium_Down {
+				max-width: 100px;
+			}
 		}
 	}
 
@@ -57,15 +60,11 @@
 
 
 .navbar {
-	padding: 10px 0;
+	padding: 15px 0;
 
 	@include M_Large_Up {
 		@include anim(.2s);
 		padding: 15px 0;
-	}
-
-	@include M_Medium_Down {
-		padding: 10px 0;
 	}
 
 	&.navbar-dark {
@@ -142,7 +141,7 @@
 		/* purgecss start ignore */
 		.show {
 			.navbar-nav .nav-item .nav-link {
-				color: $cl-navbar-dark;
+				color: $cl-navbar-light;
 			}
 		}
 

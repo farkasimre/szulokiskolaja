@@ -2918,7 +2918,7 @@ textarea.form-control-lg {
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
-  --bs-btn-font-size: 1.125rem;
+  --bs-btn-font-size: 1.25rem;
   --bs-btn-font-weight: 400;
   --bs-btn-line-height: 1.5;
   --bs-btn-color: var(--bs-body-color);
@@ -15505,7 +15505,7 @@ html {
 }
 
 body {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.625;
   color: #3d3d3d;
   -webkit-font-smoothing: antialiased;
@@ -15514,17 +15514,17 @@ body {
 }
 @media (min-width: 992px) {
   body {
-    font-size: 17px;
+    font-size: 19px;
   }
 }
 @media (min-width: 1200px) {
   body {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1500px) {
   body {
-    font-size: 19px;
+    font-size: 21px;
   }
 }
 
@@ -15595,7 +15595,7 @@ h5,
 
 h6,
 .h6 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 a {
@@ -16304,6 +16304,11 @@ a:hover {
   margin: -8px 5px 0 0;
   max-width: 140px;
 }
+@media (max-width: 719.98px) {
+  .header .navbar-brand img {
+    max-width: 100px;
+  }
+}
 .header .topnav {
   position: absolute;
   top: 8px;
@@ -16316,7 +16321,7 @@ a:hover {
 }
 
 .navbar {
-  padding: 10px 0;
+  padding: 15px 0;
 }
 @media (min-width: 992px) {
   .navbar {
@@ -16325,11 +16330,6 @@ a:hover {
     -o-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1);
     transition: all 0.2s cubic-bezier(0.5, 0, 0, 1);
     padding: 15px 0;
-  }
-}
-@media (max-width: 719.98px) {
-  .navbar {
-    padding: 10px 0;
   }
 }
 .navbar.navbar-dark {
@@ -16441,7 +16441,7 @@ a:hover {
   /* purgecss start ignore */
 }
 .navbar.navbar-light .show .navbar-nav .nav-item .nav-link {
-  color: #242424;
+  color: #fff;
 }
 .navbar.navbar-light {
   /* purgecss end ignore */
@@ -16924,11 +16924,11 @@ a:hover {
 }
 
 .grid-item .img-ratio .overlay,
-.hovered-item .img-ratio .overlay, .blck-hero, .has-gradient {
+.hovered-item .img-ratio .overlay, .blck-hero, .blck-hero-half, .has-gradient {
   overflow: hidden;
 }
 .grid-item .img-ratio .overlay:after,
-.hovered-item .img-ratio .overlay:after, .blck-hero:after, .has-gradient:after {
+.hovered-item .img-ratio .overlay:after, .blck-hero:after, .blck-hero-half:after, .has-gradient:after {
   content: "";
   position: absolute;
   top: 0;
@@ -16957,8 +16957,19 @@ a:hover {
   border-radius: 0 30px;
 }
 
-.blck-hero-half {
-  height: 50vh;
+.blck-hero-half .blck-full-img {
+  padding: 30px 0 30px;
+  height: 100%;
+}
+@media (min-width: 720px) {
+  .blck-hero-half .blck-full-img {
+    padding: 70px 0 30px;
+  }
+}
+@media (min-width: 992px) {
+  .blck-hero-half .blck-full-img {
+    padding: 100px 0 60px;
+  }
 }
 
 .blck-hero {
@@ -16966,21 +16977,18 @@ a:hover {
 }
 .blck-hero .blck-full-img {
   min-height: 400px;
-}
-
-.blck-full-img {
   margin-top: -100px;
   padding: 60px 0 60px;
   height: 100%;
 }
 @media (min-width: 720px) {
-  .blck-full-img {
+  .blck-hero .blck-full-img {
     margin-top: -100px;
     padding: 80px 0 70px;
   }
 }
 @media (min-width: 992px) {
-  .blck-full-img {
+  .blck-hero .blck-full-img {
     margin-top: -140px;
     padding: 140px 0 100px;
   }
@@ -17040,7 +17048,9 @@ a:hover {
 .team-item {
   margin-bottom: 20px;
 }
-.team-item p, .team-item h6, .team-item .h6 {
+.team-item p,
+.team-item h6,
+.team-item .h6 {
   margin-bottom: 0px;
 }
 
@@ -17328,6 +17338,7 @@ a:hover {
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: top center;
+  border: 1px solid red;
 }
 .bg-image.bg-image-abs {
   position: absolute;
