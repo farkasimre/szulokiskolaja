@@ -1,4 +1,6 @@
-/* function bgImagesSet */
+console.log(1);
+ 
+ /* function bgImagesSet */
 // set the provided images as background images and fade them in
 
 function bgImagesSet() {
@@ -67,13 +69,49 @@ function PlyrAudioPlayer() {
   }
   }
   /* end of function PlyrAudioPlayer */
+  
+/** Iframe population */
+ function Populate_Iframe_Mixcloud_Mariaradio() {
+
+  // Select all play buttons with the specified class
+  const IframeButton = document.querySelectorAll('.btn-play-audio-mariaradio');
+ 
+
+  IframeButton.forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent opening the href link
+
+      // Get the wrapper div containing the button
+      const buttonWrapper = button.parentElement;
+
+      // Find the iframe immediately following the wrapper div
+      const iframe = button.nextElementSibling;
+
+      if (iframe && iframe.tagName === "IFRAME") {
+        // Transfer data-src to src to load the audio widget
+        const srcUrl = iframe.getAttribute("data-src");
+        if (srcUrl) {
+          iframe.src = srcUrl;
+        }
+
+        // Show the iframe
+        iframe.style.display = "block";
+
+        // Hide the button wrapper
+        button.style.display = "none";
+      }
+    });
+  });
+};
 
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const yearElement = document.getElementById('year');
-    yearElement.textContent = new Date().getFullYear();
-    
+  const yearElement = document.getElementById('year');
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
+
   new WOW().init();
 
   bgImagesSet();
@@ -81,4 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
   SplideThumbnailCarousel();
 
   PlyrAudioPlayer();
+
+  Populate_Iframe_Mixcloud_Mariaradio();
 });

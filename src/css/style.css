@@ -3876,6 +3876,11 @@ textarea.form-control-lg {
   margin-bottom: 1rem !important;
 }
 
+.my-5 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
 .mt-auto {
   margin-top: auto !important;
 }
@@ -4026,6 +4031,9 @@ textarea.form-control-lg {
   .px-md-0 {
     padding-right: 0 !important;
     padding-left: 0 !important;
+  }
+  .text-md-start {
+    text-align: left !important;
   }
   .text-md-end {
     text-align: right !important;
@@ -7364,6 +7372,10 @@ a:hover {
 
 .img-avatar {
   max-width: 80px;
+}
+
+.h-120 {
+  height: 120px;
 }
 
 /*
